@@ -1,4 +1,6 @@
 RailsCapistrano::Application.routes.draw do
+  resources :froobles
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
