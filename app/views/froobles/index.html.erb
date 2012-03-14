@@ -20,8 +20,14 @@
     <td><%= link_to 'Destroy', frooble, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
+
+<% if @froobles.empty? %>
+  <tr>
+    <td colspan="6">No frooble? No Fun. Go <%= link_to 'create one!', new_frooble_path %></td>
+  </tr>
+<% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Frooble', new_frooble_path %>
+<%= link_to 'New Frooble', new_frooble_path unless @froobles.empty? %>
